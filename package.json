@@ -1,0 +1,36 @@
+{
+  "name": "home-inet-monitor",
+  "version": "1.0.0",
+  "description": "My stupendous Nuxt.js project",
+  "author": "jasenmichael",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "netlify-serve": "netlify-lambda serve functions",
+    "netlify-build": "netlify-lambda build functions",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.1.3",
+    "bootstrap-vue": "^2.0.0",
+    "dotenv": "^8.2.0",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.27",
+    "netlify-lambda": "^1.6.3",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^1.0.1",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2"
+  }
+}
