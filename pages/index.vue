@@ -1,7 +1,10 @@
+<!--  eslint-disable vue/no-parsing-error -->
 <template>
   <div class="container">
-    <h2 class="text-center">Janda Home Server Status</h2>
-    <b-button block size="lg" disabled>{{ status }}</b-button>
+    <h2 class="text-center">
+      Janda Home Server Status
+    </h2>
+    <b-button :variant="status === 'Online' ? 'success' : 'danger'" block size="lg" disabled>{{ status }}</b-button>
     <h6 class="text-center">
       <b>Last Check:</b>
       {{ last }}
