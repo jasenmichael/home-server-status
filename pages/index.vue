@@ -31,14 +31,14 @@ export default {
   mounted() {
     console.log(
       'mounted',
-      `https://happy-swartz-19c3c3.netlify.com/.netlify/functions/home-status/home-status`
+      `/.netlify/functions/home-status/home-status`
     )
     setTimeout(() => {
       this.status = this.status + '.'
     }, 750)
     setTimeout(() => {
       this.status = this.status + '.'
-      axios(`https://happy-swartz-19c3c3.netlify.com/.netlify/functions/home-status`)
+      axios(`/.netlify/functions/home-status`)
         .then(res => {
           console.log(res.data)
           this.status = res.data.online === true ? 'Online' : 'Offline'
