@@ -1,9 +1,7 @@
 <template>
   <div class="container">
-    <h2>Janda Home Server Status</h2>
-    <b-button block size="lg" disabled>
-      {{ status }}
-    </b-button>
+    <h2 class="text-center">Janda Home Server Status</h2>
+    <b-button block size="lg" disabled>{{ status }}</b-button>
     <h6 class="text-center">
       <b>Last Check:</b>
       {{ last }}
@@ -29,16 +27,19 @@ export default {
     }
   },
   mounted() {
-    console.log(
-      'mounted',
-      `/.netlify/functions/home-status/home-status`
-    )
     setTimeout(() => {
       this.status = this.status + '.'
     }, 750)
     setTimeout(() => {
       this.status = this.status + '.'
+      this.checkStatus()
+    }, 1500)
+  },
+  methods: {
+    checkStatus() {
+      console.log('checking status...')
       axios(`/.netlify/functions/home-status`)
+      // axios(`http://localhost:9000/home-status`)
         .then(res => {
           console.log(res.data)
           this.status = res.data.online === true ? 'Online' : 'Offline'
@@ -48,7 +49,7 @@ export default {
         .catch(err => {
           console.error(err)
         })
-    }, 1500)
+    }
   }
 }
 </script>
