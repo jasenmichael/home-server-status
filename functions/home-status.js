@@ -3,7 +3,7 @@
 /* eslint-disable no-console */
 const axios = require('axios')
 const moment = require('moment-timezone')
-require('dotenv').config()
+// require('dotenv').config()
 
 const {
   JANDA_DB_URL,
