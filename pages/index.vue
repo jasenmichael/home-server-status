@@ -31,7 +31,7 @@ export default {
   mounted() {
     console.log(
       'mounted',
-      `http://${process.env.NETLIFY_FUNCTIONS_URL}/home-status`
+      `https://localhost/.netlify/functions/home-status/home-status`
     )
     setTimeout(() => {
       this.status = this.status + '.'
