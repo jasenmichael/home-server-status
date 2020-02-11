@@ -38,7 +38,7 @@ export default {
     }, 750)
     setTimeout(() => {
       this.status = this.status + '.'
-      axios(`http://${process.env.NETLIFY_FUNCTIONS_URL}/home-status`)
+      axios(`https://localhost/.netlify/functions/home-status/home-status`)
         .then(res => {
           console.log(res.data)
           this.status = res.data.online === true ? 'Online' : 'Offline'
