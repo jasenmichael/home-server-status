@@ -24,7 +24,7 @@ exports.handler = function (event, context, cb) {
     axios.get(URL, options)
       .then(async (res) => {
         // const online = false
-        if ((res.data.online && await checkIfUpdated(res.data.next_check)) || status === true) {
+        if ((res.data.online === true && await checkIfUpdated(res.data.next_check)) || status === true) {
           const result = {
             'online': res.data.online,
             'next_check': res.data.next_check,
